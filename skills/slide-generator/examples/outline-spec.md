@@ -47,6 +47,7 @@ Each slide is separated by `---` and must contain the following block structure:
 * `grid` — 2x2 or 2x3 cards layout
 * `diagram` — Reserved for SVG/CSS flowchart code
 * `full-image` — Full screen image background
+* `absolute` — Custom absolute coordinate layout. Requires using `[textbox top="..." left="..." width="..."]...[/textbox]` block tags to place text boxes at arbitrary positions. Support multi-line texts and custom coordinates.
 
 ---
 
@@ -58,7 +59,7 @@ Each slide is separated by `---` and must contain the following block structure:
 **Theme:** technical-blueprint
 **Voice:** notebooklm
 **Language:** Tiếng Việt
-**Total slides:** 2
+**Total slides:** 3
 
 ---
 
@@ -96,4 +97,30 @@ Each slide is separated by `---` and must contain the following block structure:
 **Description:** Function Calling là bước đột phá đầu tiên — LLM không còn chỉ nói, nó bắt đầu làm.
 
 [diagram] Flowchart: User → LLM → Tool Selection → Execution → Result → LLM → Response [/diagram]
+
+---
+
+[//]: # (3)
+## Bố cục tự do absolute
+**Title:** Sơ đồ tương tác Phức hợp
+**Layout:** absolute
+
+[textbox top="120px" left="100px" width="300px"]
+**Khối điều khiển chính**
+- Nhận input trực tiếp từ người dùng
+- Kiểm tra tính hợp lệ dữ liệu
+[/textbox]
+
+[textbox top="250px" left="480px" width="320px"]
+**Động cơ suy luận (LLM Core)**
+Phân tích ngữ cảnh,
+Đưa ra quyết định gọi Tool
+[/textbox]
+
+[textbox top="400px" left="860px" width="300px"]
+**Bộ nhớ đệm (Cache)**
+Tối ưu hóa thời gian phản hồi
+[/textbox]
+
+[img-gen] Abstract system architecture blueprint showing interconnected nodes, navy blue and copper accents, high-tech engineering drawing style, 16:9 [/img-gen]
 ```

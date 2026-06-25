@@ -16,6 +16,36 @@ if (!fs.existsSync(outlinePath)) {
 }
 
 // 1. Phân tích cú pháp outline.md
+// Hàm parse các absolute textboxes từ nội dung slide block
+function parseAbsoluteTextboxes(blockText) {
+  const textboxes = [];
+  const textboxRegex = /\[textbox\s+([^\]]+)\]([\s\S]*?)\[\/textbox\]/g;
+  let match;
+  
+  while ((match = textboxRegex.exec(blockText)) !== null) {
+    const attrsStr = match[1];
+    const content = match[2].trim();
+    
+    // Parse attrs: top="..." left="..." width="..."
+    const attrs = {};
+    const attrRegex = /(\w+)="([^"]+)"/g;
+    let attrMatch;
+    while ((attrMatch = attrRegex.exec(attrsStr)) !== null) {
+      attrs[attrMatch[1]] = attrMatch[2];
+    }
+    
+    textboxes.push({
+      top: attrs.top || '0px',
+      left: attrs.left || '0px',
+      width: attrs.width || 'auto',
+      content: content
+    });
+  }
+  
+  return textboxes;
+}
+
+// 1. Phân tích cú pháp outline.md
 function parseOutline(filePath) {
   const content = fs.readFileSync(filePath, 'utf-8');
   const slides = [];
@@ -34,8 +64,15 @@ function parseOutline(filePath) {
   slideBlocks.forEach((block) => {
     if (!block.trim()) return;
     
-    const lines = block.split('\n');
-    const slide = { bullets: [] };
+    const slide = { bullets: [], textboxes: [] };
+    
+    // Quét và trích xuất textboxes
+    slide.textboxes = parseAbsoluteTextboxes(block);
+    
+    // Loại bỏ các tag [textbox]...[/textbox] để tránh parse nhầm ở bước sau
+    const cleanBlock = block.replace(/\[textbox\s+[^\]]+\][\s\S]*?\[\/textbox\]/g, '');
+    
+    const lines = cleanBlock.split('\n');
     
     lines.forEach((line) => {
       const cleanLine = line.trim();
@@ -213,6 +250,26 @@ slides.forEach((slide) => {
           </div>
     `;
     code = code.replace(/\{\{DIAGRAM_CODE\}\}/g, defaultDiagram);
+  } else if (layout === 'absolute') {
+    const textboxesCode = (slide.textboxes || []).map((box) => {
+      const safeContent = JSON.stringify(box.content).slice(1, -1);
+      return `          <motion.div 
+            className="absolute pointer-events-auto p-4 rounded bg-[var(--bg-secondary)] border border-[var(--text-ghost)]"
+            style={{ 
+              top: '${box.top}', 
+              left: '${box.left}', 
+              width: '${box.width}', 
+              whiteSpace: 'pre-line',
+              zIndex: 10 
+            }}
+            variants={animations.item}
+            initial="hidden"
+            animate="show"
+          >
+            {"${safeContent}"}
+          </motion.div>`;
+    }).join('\n');
+    code = code.replace(/\{\{ABSOLUTE_ITEMS\}\}/g, textboxesCode);
   } else {
     // Các layout thông thường (center, image-left, image-right)
     code = code.replace(/\{\{BULLET_POINTS\}\}/g, renderBullets(slide.bullets));
