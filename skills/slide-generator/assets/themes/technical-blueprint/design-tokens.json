@@ -1,0 +1,27 @@
+{
+  "fonts": "@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;1,600&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@500&display=swap');",
+  "variables": {
+    "--bg-primary": "#f5f0e8",
+    "--bg-secondary": "#ece7dd",
+    "--accent": "#c45a28",
+    "--accent-glow": "rgba(196, 90, 40, 0.3)",
+    "--accent-secondary": "#2d4a7a",
+    "--accent-secondary-dim": "rgba(45, 74, 122, 0.4)",
+    "--text-primary": "#1a1a1a",
+    "--text-secondary": "rgba(26, 26, 26, 0.80)",
+    "--text-muted": "rgba(26, 26, 26, 0.55)",
+    "--text-subtle": "rgba(26, 26, 26, 0.35)",
+    "--text-ghost": "rgba(26, 26, 26, 0.15)",
+    "--accent-text": "#c45a28",
+    "--accent-dim": "rgba(196, 90, 40, 0.50)",
+    "--accent-ghost": "rgba(196, 90, 40, 0.15)"
+  },
+  "compatibility": {
+    "compatible": [
+      "diagram",
+      "grid",
+      "two-column"
+    ],
+    "avoid": []
+  }
+}

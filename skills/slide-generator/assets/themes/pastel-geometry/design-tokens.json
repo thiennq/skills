@@ -1,0 +1,32 @@
+{
+  "fonts": "@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');",
+  "variables": {
+    "--bg-primary": "#c8d9e6",
+    "--bg-secondary": "#faf9f7",
+    "--accent": "#6c8ebf",
+    "--accent-glow": "rgba(108, 142, 191, 0.3)",
+    "--pill-blue": "#b8d4e8",
+    "--pill-pink": "#f0d4d8",
+    "--pill-green": "#c8e6c8",
+    "--pill-amber": "#f0e4c8",
+    "--text-primary": "#1a1a1a",
+    "--text-secondary": "rgba(26, 26, 26, 0.85)",
+    "--text-muted": "rgba(26, 26, 26, 0.55)",
+    "--text-subtle": "rgba(26, 26, 26, 0.35)",
+    "--text-ghost": "rgba(26, 26, 26, 0.15)",
+    "--accent-text": "#6c8ebf",
+    "--accent-dim": "rgba(108, 142, 191, 0.60)",
+    "--accent-ghost": "rgba(108, 142, 191, 0.25)"
+  },
+  "compatibility": {
+    "compatible": [
+      "center",
+      "image-left",
+      "image-right",
+      "two-column",
+      "grid",
+      "full-image"
+    ],
+    "avoid": []
+  }
+}

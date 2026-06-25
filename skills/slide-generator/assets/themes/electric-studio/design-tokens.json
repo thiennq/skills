@@ -1,0 +1,27 @@
+{
+  "fonts": "@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap');",
+  "variables": {
+    "--bg-primary": "#0a0a0a",
+    "--bg-secondary": "#141414",
+    "--accent": "#4361ee",
+    "--accent-glow": "rgba(67, 97, 238, 0.4)",
+    "--text-primary": "#ffffff",
+    "--text-secondary": "rgba(255, 255, 255, 0.85)",
+    "--text-muted": "rgba(255, 255, 255, 0.55)",
+    "--text-subtle": "rgba(255, 255, 255, 0.35)",
+    "--text-ghost": "rgba(255, 255, 255, 0.15)",
+    "--accent-text": "#4361ee",
+    "--accent-dim": "rgba(67, 97, 238, 0.60)",
+    "--accent-ghost": "rgba(67, 97, 238, 0.25)"
+  },
+  "compatibility": {
+    "compatible": [
+      "image-left",
+      "image-right",
+      "two-column"
+    ],
+    "avoid": [
+      "center"
+    ]
+  }
+}

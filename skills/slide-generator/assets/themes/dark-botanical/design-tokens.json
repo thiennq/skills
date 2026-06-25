@@ -1,0 +1,32 @@
+{
+  "fonts": "@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500&family=IBM+Plex+Sans:wght@300;400&display=swap');",
+  "variables": {
+    "--bg-primary": "#0f0f0f",
+    "--bg-secondary": "#1a1a1a",
+    "--accent": "#d4a574",
+    "--accent-secondary": "#e8b4b8",
+    "--accent-glow": "rgba(212, 165, 116, 0.3)",
+    "--text-primary": "#ffffff",
+    "--text-secondary": "rgba(255, 255, 255, 0.85)",
+    "--text-muted": "rgba(255, 255, 255, 0.55)",
+    "--text-subtle": "rgba(255, 255, 255, 0.35)",
+    "--text-ghost": "rgba(255, 255, 255, 0.15)",
+    "--accent-text": "#d4a574",
+    "--accent-dim": "rgba(212, 165, 116, 0.60)",
+    "--accent-ghost": "rgba(212, 165, 116, 0.25)",
+    "--pink": "#e8b4b8",
+    "--pink-dim": "rgba(232, 180, 184, 0.60)",
+    "--pink-ghost": "rgba(232, 180, 184, 0.25)"
+  },
+  "compatibility": {
+    "compatible": [
+      "center",
+      "image-left",
+      "image-right",
+      "two-column",
+      "grid",
+      "full-image"
+    ],
+    "avoid": []
+  }
+}

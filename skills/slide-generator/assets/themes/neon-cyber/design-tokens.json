@@ -1,0 +1,32 @@
+{
+  "fonts": "@import url('https://api.fontshare.com/v2/css?f[]=clash-display@700&f[]=satoshi@400,500&display=swap');",
+  "variables": {
+    "--bg-primary": "#0a0f1c",
+    "--bg-secondary": "#111827",
+    "--accent": "#00ffcc",
+    "--accent-secondary": "#ff00aa",
+    "--accent-glow": "rgba(0, 255, 204, 0.3)",
+    "--text-primary": "#ffffff",
+    "--text-secondary": "rgba(255, 255, 255, 0.85)",
+    "--text-muted": "rgba(255, 255, 255, 0.55)",
+    "--text-subtle": "rgba(255, 255, 255, 0.35)",
+    "--text-ghost": "rgba(255, 255, 255, 0.15)",
+    "--accent-text": "#00ffcc",
+    "--accent-dim": "rgba(0, 255, 204, 0.60)",
+    "--accent-ghost": "rgba(0, 255, 204, 0.25)",
+    "--magenta": "#ff00aa",
+    "--magenta-dim": "rgba(255, 0, 170, 0.60)",
+    "--magenta-ghost": "rgba(255, 0, 170, 0.25)"
+  },
+  "compatibility": {
+    "compatible": [
+      "center",
+      "image-left",
+      "image-right",
+      "two-column",
+      "grid",
+      "full-image"
+    ],
+    "avoid": []
+  }
+}

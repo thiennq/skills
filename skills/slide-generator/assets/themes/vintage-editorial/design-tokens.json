@@ -1,0 +1,28 @@
+{
+  "fonts": "@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Work+Sans:wght@400;600&display=swap');",
+  "variables": {
+    "--bg-primary": "#f5f3ee",
+    "--bg-secondary": "#ffffff",
+    "--accent": "#e8d4c0",
+    "--accent-glow": "rgba(232, 212, 192, 0.4)",
+    "--text-primary": "#1a1a1a",
+    "--text-secondary": "rgba(26, 26, 26, 0.85)",
+    "--text-muted": "rgba(26, 26, 26, 0.55)",
+    "--text-subtle": "rgba(26, 26, 26, 0.35)",
+    "--text-ghost": "rgba(26, 26, 26, 0.15)",
+    "--accent-text": "#a67c52",
+    "--accent-dim": "rgba(166, 124, 82, 0.60)",
+    "--accent-ghost": "rgba(166, 124, 82, 0.25)"
+  },
+  "compatibility": {
+    "compatible": [
+      "center",
+      "image-left",
+      "image-right",
+      "two-column",
+      "grid",
+      "full-image"
+    ],
+    "avoid": []
+  }
+}

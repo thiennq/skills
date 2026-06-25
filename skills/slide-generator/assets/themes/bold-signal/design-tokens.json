@@ -1,0 +1,27 @@
+{
+  "fonts": "@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;600&display=swap');",
+  "variables": {
+    "--bg-primary": "#1a1a1a",
+    "--bg-secondary": "#242424",
+    "--accent": "#FF5722",
+    "--accent-glow": "rgba(255, 87, 34, 0.4)",
+    "--text-primary": "#ffffff",
+    "--text-secondary": "rgba(255, 255, 255, 0.85)",
+    "--text-muted": "rgba(255, 255, 255, 0.55)",
+    "--text-subtle": "rgba(255, 255, 255, 0.35)",
+    "--text-ghost": "rgba(255, 255, 255, 0.15)",
+    "--accent-text": "#FF5722",
+    "--accent-dim": "rgba(255, 87, 34, 0.60)",
+    "--accent-ghost": "rgba(255, 87, 34, 0.25)"
+  },
+  "compatibility": {
+    "compatible": [
+      "image-left",
+      "two-column"
+    ],
+    "avoid": [
+      "center",
+      "image-right"
+    ]
+  }
+}

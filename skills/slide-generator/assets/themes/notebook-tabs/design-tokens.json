@@ -1,0 +1,34 @@
+{
+  "fonts": "@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@700&family=DM+Sans:wght@400;500&display=swap');",
+  "variables": {
+    "--bg-primary": "#f8f6f1",
+    "--bg-secondary": "#ffffff",
+    "--bg-outer": "#2d2d2d",
+    "--accent": "#4a90d9",
+    "--accent-glow": "rgba(74, 144, 217, 0.3)",
+    "--tab-red": "#e74c3c",
+    "--tab-blue": "#4a90d9",
+    "--tab-green": "#27ae60",
+    "--tab-amber": "#f39c12",
+    "--tab-purple": "#9b59b6",
+    "--text-primary": "#1a1a1a",
+    "--text-secondary": "rgba(26, 26, 26, 0.85)",
+    "--text-muted": "rgba(26, 26, 26, 0.55)",
+    "--text-subtle": "rgba(26, 26, 26, 0.35)",
+    "--text-ghost": "rgba(26, 26, 26, 0.15)",
+    "--accent-text": "#4a90d9",
+    "--accent-dim": "rgba(74, 144, 217, 0.60)",
+    "--accent-ghost": "rgba(74, 144, 217, 0.25)"
+  },
+  "compatibility": {
+    "compatible": [
+      "center",
+      "image-left",
+      "image-right",
+      "two-column",
+      "grid",
+      "full-image"
+    ],
+    "avoid": []
+  }
+}
